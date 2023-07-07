@@ -1,6 +1,6 @@
 deepspeed train.py \
     --model_name_or_path huggyllama/llama-13b \
-    --dataset_path datasets/llama-13b-tokenized-wiki-2-v1 \
+    --dataset_path alexgshaw/llama-13b-tokenized-wikitext-2-v1 \
     --run_name llama-13b-wiki-2-v1 \
     --bf16 True \
     --output_dir finetunes \
