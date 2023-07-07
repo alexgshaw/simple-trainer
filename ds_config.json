@@ -1,4 +1,9 @@
 {
+  "wandb": {
+    "enabled": true,
+    "group": "supercomputer-llama-13b-hf",
+    "project": "media-training"
+  },
   "bf16": {
     "enabled": "auto"
   },
