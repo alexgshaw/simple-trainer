@@ -15,7 +15,7 @@ deepspeed train.py \
     --learning_rate 5e-6 \
     --weight_decay 0. \
     --warmup_ratio 0.03 \
-    --deepspeed deepspeed_config.json \
+    --deepspeed ds_config.json \
     --max_grad_norm 1.0 \
     --tf32 False \
     --report_to wandb

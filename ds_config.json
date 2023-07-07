@@ -1,9 +1,4 @@
 {
-  "wandb": {
-    "enabled": true,
-    "group": "llama-65b-supercomputer",
-    "project": "media-training"
-  },
   "bf16": {
     "enabled": "auto"
   },
