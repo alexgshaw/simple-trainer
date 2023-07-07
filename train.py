@@ -20,7 +20,7 @@ class ModelArguments:
 @dataclass
 class DataArguments:
     dataset_path: str = field(
-        default="alexgshaw/llama-13b-tokenized-wikitext-2-v1",
+        default="datasets/llama-13b-tokenized-wikitext-2-v1",
         metadata={"help": "Path to the training data."},
     )
 
