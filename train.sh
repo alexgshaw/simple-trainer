@@ -4,10 +4,10 @@ deepspeed train.py \
     --run_name llama-13b-wiki-2-v1 \
     --bf16 True \
     --output_dir finetunes \
-    --num_train_epochs 3 \
-    --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 1 \
-    --gradient_accumulation_steps 1 \
+    --num_train_epochs 1 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 8 \
     --evaluation_strategy "no" \
     --save_strategy "no" \
     --logging_strategy "steps" \
