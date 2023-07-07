@@ -9,7 +9,7 @@ from transformers import (
     Trainer,
     DataCollatorForLanguageModeling,
 )
-from datasets import Dataset
+from datasets import load_dataset
 
 
 @dataclass
@@ -20,7 +20,7 @@ class ModelArguments:
 @dataclass
 class DataArguments:
     dataset_path: str = field(
-        default="datasets/llama-13b-tokenized-wikitext-2-v1",
+        default="alexgshaw/llama-13b-tokenized-wikitext-2-v1",
         metadata={"help": "Path to the training data."},
     )
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         cache_dir=training_args.cache_dir,
     )
 
-    dataset = Dataset.load_from_disk(data_args.dataset_path)
+    dataset = load_dataset(data_args.dataset_path, split="train")
 
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
