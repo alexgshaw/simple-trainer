@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Union
+from typing import Optional
 from transformers import (
     TrainingArguments as HfTrainingArguments,
     HfArgumentParser,
