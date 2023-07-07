@@ -1,13 +1,9 @@
-OUTPUT_DIR="/home/ashaw8/compute/finetunes/$RUN_NAME"
-
-python3 create_deepspeed_config.py
-
 deepspeed train.py \
-    --model_name_or_path /home/ashaw8/compute/models/$MODEL_NAME \
-    --dataset_path datasets/$TOPIC/$IDEOLOGY/$MODEL_NAME \
-    --run_name $RUN_NAME \
+    --model_name_or_path huggyllama/llama-13b \
+    --dataset_path datasets/llama-13b-tokenized-wiki-2-v1 \
+    --run_name llama-13b-wiki-2-v1 \
     --bf16 True \
-    --output_dir $OUTPUT_DIR \
+    --output_dir finetunes \
     --num_train_epochs 3 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
